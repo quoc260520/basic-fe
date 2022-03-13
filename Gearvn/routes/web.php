@@ -11,7 +11,11 @@ use App\Http\Controllers\Admin\LoginController;
 use App\Http\Controllers\Admin\Category\CategoryController;
 use App\Http\Controllers\Admin\Category\CategoryLocalController;
 use App\Http\Controllers\Admin\Category\CategoryProductController;
+use App\Http\Controllers\Admin\Orders\OrdersController;
 use App\Http\Controllers\Clients\SearchController;
+use App\Http\Controllers\Clients\CartController;
+use App\Http\Controllers\Clients\PaymentController;
+
 
 
 /*
@@ -39,11 +43,21 @@ Route::prefix('index')->group(function () {
     Route::get('/', [HomeController::class, 'getIndex'])->name('index');
     Route::get('/product/{id}', [HomeController::class, 'getProductDetails'])->name('product-detail');
     Route::get('/cart', [HomeController::class, 'getCart'])->name('index.cart');
-    Route::get('/search', [SearchController::class, 'postSearch'])->name('index.search');
+    Route::get('/add-cart/{id}', [CartController::class, 'addCart'])->name('index.add-cart');
+    Route::get('/delete-cart/{id}', [CartController::class, 'deleteCart'])->name('index.delete-cart');
+    Route::get('/update-cart/{id}', [CartController::class, 'updateCart'])->name('index.update-cart');
+    Route::get('/update-cart-add/{id}', [CartController::class, 'updateCartAdd'])->name('index.update-cart-add');
+    Route::get('/search', [SearchController::class, 'getSearch'])->name('index.search');
     Route::post('/search', [SearchController::class, 'postSearch'])->name('index.post-search');
-    Route::get('/payment', [HomeController::class, 'getPayment'])->name('payment');
-    Route::get('/payment_method', [HomeController::class, 'getPaymentMethod'])->name('payment_method');
+    Route::get('/payment', [PaymentController::class, 'getPayment'])->name('payment');
+    Route::post('/payment', [PaymentController::class, 'postPayment'])->name('post-payment');
+    Route::get('/payment_method', [PaymentController::class, 'getPaymentMethod'])->name('payment_method');
+    Route::post('/payment_method', [PaymentController::class, 'postPaymentMethod'])->name('post-payment_method');
 
+
+    Route::post('/get-district', [PaymentController::class, 'getDistrict'])->name('get-district');
+
+    Route::get('/login', [HomeController::class, 'getIndex'])->name('login-user');
 });
 
 ///Admin
@@ -120,5 +134,11 @@ Route::middleware('check.role')->prefix('admin')->group(function () {
         Route::post('/post-update', [UserAdminController::class, 'postUpdateUser'])->name('user.post-update');
         Route::get('/delete/{id}', [UserAdminController::class, 'deleteUser'])->name('user.delete');
     });
+    Route::prefix('orders')->group(function (){
+        Route::get('/', [OrdersController::class,'getOrder'])->name('orders');
+        Route::get('/order-info/{id}', [OrderOrdersController::class,'getInfoOrder'])->name('orders.info');
+        Route::get('/update-order/{id}/{status}', [OrdersController::class,'getUpdate'])->name('orders.post-update');
+    });
+   
 
 });

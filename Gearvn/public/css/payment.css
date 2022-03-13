@@ -40,15 +40,15 @@ body{
     text-decoration: none;
     color: #333;
 }
-.payment__container-left__path-link:first-child,
-.payment__container-left__path-link:last-child{
-    text-decoration: none;
-    color:#338dbc;
-}
+
 .payment__container-left__path-link{
     text-decoration: none;
     padding-right: 10px;
     color:#333;
+}
+.payment__container-left__path-link--blue{
+    text-decoration: none;
+    color:#338dbc;
 }
 .payment__container-left__path-icon{
     padding-right: 10px;
@@ -66,13 +66,13 @@ body{
 }
 input, select {
     width: 100%;
-    height: 45px;
+    height: 50px;
     border: 1px solid #ccc;
     outline-color:#338dbc;
     outline-width: thick  ;
     border-radius:4px;
     padding: 5px 10px;
-    font-size: 1.4rem;
+    font-size: 1.6rem;
    
 }
 .payment__container-left__input-name{
@@ -84,32 +84,28 @@ input, select {
     flex-wrap: nowrap;
 
 }
-.payment__container-left__input-email{
-    flex:2;
-    margin-right: 10px;
-
-}
-.payment__container-left__input-phone{
-    flex:1;
-
-}
-
 
 
 .payment__container-left__select-conscious{
     flex:1;
+    height:50px;
     margin-right: 5px;
-
+    font-size: 1.5rem;
+    border-radius: 4px;
 }
 
 .payment__container-left__select-district{
     flex:1;
     margin-left: 5px;
+    height:50px;
+    font-size: 1.5rem;
+    border-radius: 4px;
 
 }
 .payment__container-left__btn-wrap{
     margin-top: 20px;
     display: flex;
+    justify-content:space-between;
 }
 .payment__container-left__link--cart{
     text-decoration: none;
@@ -117,14 +113,12 @@ input, select {
     color:#338dbc;
     height: 56px;
     line-height: 56px;
-    flex: 1;
-    width: 100%;
+    width: 220px;
 }
 .btn-payment{
     height: 56px;
     background-color:#286f94;
-    flex:1;
-    max-width: 300px;
+    width: 348px;
 }
 .btn-payment:hover{
      background: #338dbc;
@@ -478,4 +472,20 @@ input, select {
     font-size: 1.5rem;
     color:var(--text-color);
     text-align:center;
+}
+.payment__container-left__form-col-2{
+    display: flex;
+    flex-direction: column;
+    height:50px;
+}
+.form-fl-2{
+    display: flex;
+    flex-direction: column;
+    flex:2;
+    margin-right: 15px;
+}
+.form-fl-1{
+    display: flex;
+    flex-direction: column;
+    flex:1;
 }

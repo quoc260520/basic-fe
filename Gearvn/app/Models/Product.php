@@ -14,6 +14,16 @@ class Product extends Model
        $list = DB::table(''.$this->table.'')->get();
        return $list;
     }
+    public function getProductSort($sort,$data){
+        $data=str_replace('','%',$data);
+        $list=DB::table(''.$this->table.'')
+        ->select('product.*')
+        ->select(DB::raw("product.*,CAST(REPLACE(product.product_price, '.', '') AS DECIMAL) as price " ))
+        ->where('product_name', 'like', '%'.$data.'%')
+        ->orderBy('price',$sort)
+        ->paginate(24);
+        return $list;
+    }
     public function getProductOther($id) {
         $list = DB::table(''.$this->table.'')
         ->where('id','<>',$id)
@@ -21,10 +31,10 @@ class Product extends Model
         return $list;
      }
     public function getOnlyProduct($id) {
-        $category = DB::table(''.$this->table.'')
+        $product = DB::table(''.$this->table.'')
         ->where('id', '=', $id)
-        ->first();
-        return $category;
+        ->get();
+        return $product;
      }
     public function addProduct($data) {
         return DB::insert('insert into '.$this->table.'
