@@ -1,0 +1,203 @@
+.admin {
+    width: 100%;
+    height: 100vh;
+}
+
+/* admin__slider-bar */
+.admin__slider-bar{
+    width: 100%;
+    height: 100%;
+    background-color: rgb(85, 79, 79);
+    padding: 30px;
+    color:#fff;
+
+}
+
+.admin__slider-bar__header{
+    border-bottom: 1px solid #7a7676;
+    font-size:1.8rem;
+    font-weight: 500;
+    text-decoration: none;
+    color:#fff;
+    padding: 15px;
+}
+.admin__slider-bar__header__icon{
+    padding-right: 10px;
+    cursor: pointer;
+    
+}
+.admin__slider-bar__header__link{
+    text-decoration: none;
+    color:#fff;
+}
+.admin__slider-bar__list{
+    list-style: none;
+    padding: 0;
+}
+.admin__slider-bar__list-item{
+    padding:10px;
+    margin-bottom: 4px;
+    border-radius:4px;
+    font-size: 1.6rem;
+    line-height:1.6rem;
+    color:#fff;
+    cursor: pointer;
+    display: flex;
+    position: relative;
+}
+.slider__bg{
+    background-color: rgb(233, 20, 20);
+}
+.slider-nav__bg{
+    background-color: #0062bd;
+}
+
+.admin__slider-bar__list-item__icon{
+    padding-right: 10px;
+}
+.admin__slider-bar__list-item__link{
+    text-decoration: none;
+    color:#fff;
+}
+
+/* admin__container */
+
+.admin__container {
+    width: 100%;
+    height: 100%;
+    background-color: #f0eaea;
+}
+.admin__container-header{
+    display: flex;
+    justify-content: space-between;
+    height: 50px;
+    background-color: rgb(190, 185, 185);
+    align-items: center;
+    padding: 0 20px;
+}
+.admin__container-header__heading{
+    font-size: 2.5rem;
+}
+.admin__container-header__link{
+    font-size: 1.2rem;
+    color:#0768c2;
+    text-decoration: none;
+}
+/* Slider */
+.admin__container-slider__navbar{
+    
+}
+.admin__container-slider__navbar-list{
+    list-style: none;
+    display: flex;
+    padding: 0 20px;
+}
+.admin__container-slider__navbar-list__item{
+    padding: 15px;
+    margin-right: 15px;
+    border-radius:4px;
+    font-size: 1.6rem;
+    font-weight: 500;
+    color: var(--text-color);
+    cursor: pointer;
+}
+.admin__container-slider__navbar__content{
+    min-height: 700px;
+    padding:0 20px 10px;
+}
+.admin__container-slider__navbar__content-table{
+    width: 80%;
+    border-collapse: collapse;
+   
+    
+}
+.admin__container-slider__navbar__content-table td, 
+.admin__container-slider__navbar__content-table th {
+    border: 1px solid black;
+    padding: 8px;
+    text-align: center;
+    font-size: 1.3rem;
+  }
+.admin__container-slider__navbar__content-table__icon{
+    font-size: 1.6rem;
+    color: red;
+}
+.admin__container-slider__navbar__content-table__img {
+   max-width: 100px;
+   max-height: 100px;
+}
+.admin__container-slider__navbar__content-form{
+    padding:10px 0;
+    display: flex;
+    flex-direction: column;
+}
+.admin__container-slider__navbar__content-form__heading{
+    font-size: 2.2rem;
+     
+}
+.admin__container-slider__navbar__content-form-wrap{
+    border:1px solid #000;
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    padding: 0 10px 10px;
+    border-radius:4px;
+}
+.admin__container-slider__navbar__content-form__text{
+    font-size: 1.6rem;
+    padding:10px 0;
+}
+.admin__container-slider__navbar__content-form__input{
+    height: 40px;
+    width: 50%;
+    padding:10px;
+    font-size: 1.5rem;
+}
+.admin__container-slider__navbar__content-form__btn{
+    margin-top: 10px;
+    width: 50px;
+}
+.admin__container-product_heading{
+    font-size: 2.2rem;
+    padding:10px 0;
+}
+
+/* Product */
+.admin__container-product__add{
+    width: 100%;
+    height: 100%;
+  
+}
+.admin__container-product__add-wrapper{
+    display: flex;
+}
+.admin__container-product__add-wrap{
+    flex: 1;
+}
+.admin__container-product__add-detail {
+    flex: 1;
+}
+.admin__container-product__add-form__row{
+    align-items: center;
+}
+.admin__container-product__add-form__text{
+    font-size: 1.5rem;
+    width: 20%;
+    padding-right: 5px;
+}
+.admin__container-product__add-form__input{
+    height:40px;
+    width: 70%;
+    font-size: 1.5rem;
+    padding: 10px;
+}
+.admin__container-product__add-form__select{
+    height:40px;
+    width: 20%;
+    font-size: 1.5rem;
+    text-align: center;
+}
+.admin__container-product__add-btn{
+    margin-top: 20px;
+
+}
